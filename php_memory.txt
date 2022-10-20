@@ -1,0 +1,17 @@
+give more memory to php in docker container
+
+@bitdegree67
+You can change it with
+echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
+inside the docker container
+but i think its temporary and hacky
+
+
+
+
+access docker container
+docker exec -it <mycontainer> bash
+
+I could accomplish the same thing by running:
+
+$ docker exec -it d2d4a89aaee9 ip addr
